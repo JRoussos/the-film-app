@@ -1,0 +1,71 @@
+.lost_container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lost_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    opacity: 0;
+}
+
+.lost_text p {
+    margin: 0;
+    position: relative;
+    left: -20px;
+    width: max-content;
+    font-size: 18px;
+    opacity: .8;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.lost_text h2 {
+    text-align: left;
+    top: 0;
+    cursor: auto;
+    position: relative;
+    color: #46494C;
+    font-size: 80px;
+    font-family: 'Six Caps', sans-serif;
+    letter-spacing: 2px;
+    margin: 10px;
+    user-select: none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+
+.lost_container img {
+    max-width: fit-content;
+    width: 400px;
+    max-height: fit-content;
+    height: 450px;
+    object-fit: contain;
+    opacity: 0;
+}
+
+.returnBtn {
+    background-color: #4C5C68;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    margin-top: 10px;
+    width: fit-content;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.returnBtn:hover {
+    background-color: #6d8191;
+}
+
+/* .lost_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: -50px;
+} */

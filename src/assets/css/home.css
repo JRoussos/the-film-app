@@ -1,0 +1,199 @@
+*{
+    font: small-caption;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+  
+.search-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    width: 70vw;
+    max-width: 800px;
+}
+
+p{
+    padding: 5px 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.dark p{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.filter_icon{
+    position: relative;
+    top: 2px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button:active {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.filter_icon:hover{
+    opacity: 0.8;
+}
+
+.dark path{
+    fill: white;
+}
+
+button{
+    /* position: absolute;
+    display: none; */
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.inside_form {
+    top: 32%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.suggestions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 10% -8vw 0;
+    gap: 15%;
+}
+
+.welcome {
+    max-width: 800px;
+    position: absolute;
+    bottom: 5%;
+}
+
+.welcome h1 {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: left;
+    font-size: 50px;
+    cursor: auto;
+    top:0;
+    position: unset;
+}
+
+.suggestions > div {
+    max-width: 250px;
+}
+
+.input_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    overflow: hidden;
+    width: auto;
+    opacity: 1;
+}
+  
+input[type="text"]{
+    box-sizing: border-box;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    font: small-caption;
+    font-size: 16px;
+    text-align: left;
+    outline: none;
+    width: calc(100% - 20px);
+    line-height: 1.9;
+    transition: background-color .3s ease-out;
+    background-color: #faf9f9;
+}
+
+.dark input[type="text"]{
+    background-color: #18191a;
+    color: #e4e6eb;
+}
+
+.dark .input_wrapper {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    caret-color:  rgba(255, 255, 255, 0.6);
+}
+
+input[type="tel"]{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    padding: 1px 5px;
+    color: rgba(0, 0, 0, 0.6);
+    border: none;
+    outline: none;
+    text-align: left;
+    width: 80px;
+    height: 30px;
+    background-color: #faf9f9;
+}
+
+.dark input[type="tel"]{
+    background-color: #18191a;
+    color: #e4e6eb;
+}
+
+input[type="tel"]::-webkit-input-placeholder {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.dark input[type="tel"]::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.dark input:focus::-webkit-input-placeholder {color: rgba(0, 0, 0, 0);}
+
+input::-webkit-input-placeholder {transition: color 0.3s;}
+input:focus::-webkit-input-placeholder {color: rgba(0, 0, 0, 0);}
+
+.filter_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8% 0;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+}
+
+.dark .filter_wrapper {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.type_container{
+    position: relative;
+}
+
+.type_array {
+    position: absolute;
+    z-index: -10;
+}
+
+.dark .type {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.type{
+    padding: 0 5px;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Six Caps', sans-serif; */
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}

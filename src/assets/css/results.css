@@ -1,0 +1,123 @@
+body{
+    margin:0;
+    line-height:1
+}
+
+.image_wrapper img{
+    border-radius:8px;
+    max-height: 200px;
+    max-width: 140px;
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.movie{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_wrapper{
+    position: relative;    
+    bottom: -10%;
+}
+
+.big{
+    transform: scale(2);
+    position: absolute;
+    top: 50vh;
+    left: 20vw;
+}
+
+.real_image{
+    transform: translateY(0);
+    transition: all .4s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.image_shadow{
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* z-index: -1; */
+    transition: all .4s ease-in-out;
+    transform: translateY(10px) scale(.9);
+}
+
+.real_image:hover + .image_shadow{
+    transform: translateY(20px) scale(.85);
+}
+
+.real_image:hover{
+    transform: translateY(-5px);
+    transition: all .4s ease;
+}
+
+.container{
+    display:grid;
+    padding:2em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap:50px;
+    grid-row-gap:80px;
+    max-width:1080px;
+    padding-top: 250px;
+    margin:0 auto;
+    transform: translateY(200px);
+}
+/* 
+#results {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+} */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.movie_title{
+    text-align: center;
+    padding: 8px;
+    margin-top: 40px;
+}
+
+.movie_title p {
+    font-size: 15px;
+    opacity: .8;
+    /* letter-spacing: 1px; */
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (max-width:700px){
+    .container{
+        grid-template-columns:1fr;
+        grid-template-rows:1fr 1fr 1fr; 
+        margin-bottom:50px
+    }
+}
+
+@supports (-ms-ime-align: auto) { 
+    .image-shadow { display: none; } 
+} 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+    .image-shadow { 
+       display: none; 
+    } 
+}
